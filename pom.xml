@@ -10,7 +10,7 @@
     <groupId>com.sachinhandiekar</groupId>
     <artifactId>jInstagram</artifactId>
     <name>jInstagram</name>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>1.2.0-flwcs-f9c6b-0</version>
     <packaging>jar</packaging>
     <description>Java Instagram API by Sachin Handiekar</description>
 
@@ -108,27 +108,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <distributionManagement>
+    <repository>
+      <id>zauber-socialtracker-releases</id>
+      <name>Zauber SocialTracker Releases</name>
+      <url>https://repo1.flowics.com/content/repositories/zauber-socialtracker-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>zauber-socialtracker-snapshots</id>
+      <name>Zauber SocialTracker Snapshots</name>
+      <url>https://repo1.flowics.com/content/repositories/zauber-socialtracker-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.3</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
+      <plugins>      
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
